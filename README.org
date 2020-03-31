@@ -4,6 +4,9 @@ Seqfilter is a small tool written in C on top of the excellent
 based on sequence IDs and sequence length. The fasta and fastq input
 files may be gzipped.
 
+*** This is has been modified from the original by clwgg. In particular, seqfilter2 enables filtering
+by matching to the read sequence, as opposed to read ID.
+
 * Get it!
 #+BEGIN_SRC bash
 git clone --recursive https://github.com/clwgg/seqfilter
@@ -37,6 +40,10 @@ seqfilter -i in.fa -l <(printf "mt\n") -o mt.fa
 
 #remove sequence called "mt" from input
 seqfilter -n -i in.fa -l <(printf "mt\n") -o in_no-mt.fa
+
+#filter by sequence identity (-l specifies sequences to match instead of IDs);
+#can set substring/slice ranges in source code
+seqfiler2 -i in.fq -l seqs.txt -o out.fq
 
 #+END_SRC
 
