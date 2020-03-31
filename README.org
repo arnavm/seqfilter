@@ -4,8 +4,7 @@ Seqfilter is a small tool written in C on top of the excellent
 based on sequence IDs and sequence length. The fasta and fastq input
 files may be gzipped.
 
-*** This is has been modified from the original by clwgg. In particular, seqfilter2 enables filtering
-by matching to the read sequence, as opposed to read ID.
+*** This is has been modified from the original by clwgg. In particular, seqfilter2 enables filtering by matching to the read sequence, as opposed to read ID.
 
 * Get it!
 #+BEGIN_SRC bash
